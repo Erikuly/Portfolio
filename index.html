@@ -17,25 +17,28 @@
                 <span>Dias</span>
             </div>
             <div class="links">
-                <div class="link" data-aos="zoom-in" data-aos-duration="1500"><a href="#">Home</a></div>
-                <div class="link" data-aos="zoom-in" data-aos-duration="1500"><a href="#">About</a></div>
-                <div class="link" data-aos="zoom-in" data-aos-duration="1500"><a href="#">Skills</a></div>
-                <div class="link" data-aos="zoom-in" data-aos-duration="1500"><a href="#">Services</a></div>
-                <div class="link" data-aos="zoom-in" data-aos-duration="1500"><a href="#">Contact</a></div>
+                <div class="link" data-aos="zoom-in" data-aos-duration="1500"><a onclick="scrollToSection('home')" href="#">Home</a></div>
+                <div class="link" data-aos="zoom-in" data-aos-duration="1500"><a onclick="scrollToSection('about')" href="#">About</a></div>
+                <div class="link" data-aos="zoom-in" data-aos-duration="1500"><a onclick="scrollToSection('skills')" href="#">Skills</a></div>
+                <div class="link" data-aos="zoom-in" data-aos-duration="1500"><a onclick="scrollToSection('services')" href="#">Services</a></div>
+                <div class="link" data-aos="zoom-in" data-aos-duration="1500"><a onclick="scrollToSection('contact')" href="#">Contact</a></div>
             </div>
             <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
         </div>
         <div class="dropdown">
             <div class="links">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Skills</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
+                <a  href="#">Home</a>
+                <a  href="#">About</a>
+                <a  href="#">Skills</a>
+                <a  href="#">Services</a>
+                <a  href="#">Contact</a>
                 <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
             </div>
         </div>
     </nav>
+
+    <button id="scrollTopBtn" class="scroll-top-btn hidden" onclick="scrollToTop()">↑</button>
+
 
     <section>
         <div class="main-container">
