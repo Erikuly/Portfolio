@@ -59,6 +59,36 @@ nav{
     text-shadow: 0 0 10px #b74b4b;
 }
 
+
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgb(232, 0, 0);
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+.scroll-top-btn:hover {
+    background-color: #b74b4b;
+}
+.scroll-top-btn.hidden {
+    display: none;
+}
+
+
+
+
+
 .hamburg,
 .cancel {
     cursor: pointer;
