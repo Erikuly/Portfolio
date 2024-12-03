@@ -1,5 +1,6 @@
 /*css*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap'); /* ссылка на шрифт */
 
 *{
     margin: 0;
@@ -70,36 +71,113 @@ nav{
     color: white;
     border: none;
     border-radius: 50%;
-    box-shadow: 0 4px 6px rgb(232, 0, 0);
+    box-shadow: 0 4px 6px rgba(232, 0, 0, 0.4);
     cursor: pointer;
     font-size: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none; /* Чтобы кнопка не блокировала события */
 }
+
+.scroll-top-btn.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 .scroll-top-btn:hover {
     background-color: #b74b4b;
 }
-.scroll-top-btn.hidden {
-    display: none;
-}
 
 
 
-
-
-.hamburg,
-.cancel {
+/* Иконка "три линии" только для мобильной версии */
+.hamburg {
+    display: none; /* Скрыта по умолчанию */
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
     cursor: pointer;
+    color: rgb(232, 0, 0);
     position: absolute;
     right: 15px;
     top: 10px;
-    color: rgb(232, 0, 0);
-    opacity: 0;
-    pointer-events: none;
-    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+    margin: 15px;
 }
+
+/* Выпадающее меню для мобильных устройств */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    flex-direction: column;
+    padding: 1rem 0;
+    text-align: center;
+    z-index: 100;
+}
+
+.dropdown.active {
+    display: flex; /* Показываем меню, когда добавлен класс active */
+}
+
+.dropdown .links a {
+    color: #551A8B;
+    padding: 1rem 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Убираем hover эффект после клика */
+.dropdown .links a:focus {
+    background-color: #b74b4b;
+    color: white; /* можно добавить цвет для выделенной ссылки */
+}
+/* Стили для активной ссылки */
+.dropdown .links a.active {
+    color: #b74b4b; /* Подсветка активной ссылки */
+    font-weight: bold;
+}
+
+/* Стили для ссылок при наведении */
+.dropdown .links a.hover {
+    background-color: rgba(183, 75, 75, 0.5); /* Легкая подсветка фона при наведении */
+    color: #fff; /* Изменение цвета текста */
+}
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+    .nav-container .links {
+        display: none; /* Скрываем горизонтальное меню на мобильных */
+    }
+
+    .hamburg {
+        display: block; /* Показываем иконку "три линии" на мобильных */
+    }
+}
+
+
+.links a{
+    position: relative;
+    font-size: 1.2rem;
+    color: rgb(255, 0, 0);
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .nav-container .links{
     display: flex;
@@ -134,31 +212,7 @@ nav{
     color: #b74b4b;
 }
 
-.dropdown{
-    z-index: 100;
-    position: absolute;
-    top: 0;
-    transform: translateY(-500px);
-    width: 100%;
-    height: auto;
-    backdrop-filter: blur(4px) brightness(40%);
-    box-shadow: 0 0 20px black;
-    transition: 0.2s linear;
-}
 
-.dropdown .links a{
-    display: flex;
-    color: white;
-    text-decoration: none;
-    justify-content: center;
-    padding: 15px 0;
-    align-items: center;
-    transition: 0.2s linear;
-}
-
-.dropdown .links a:hover{
-    background-color: #b74b4b;
-}
 
 section{
     width: 100%;
@@ -351,7 +405,7 @@ section .button{
 
 section .button button{
     outline: none;
-    padding: 8px 16px;
+    padding: 10px 16px;
     border-radius: 4px;
     font-size: 25px;
     font-weight: 400;
@@ -495,6 +549,7 @@ section .button button:hover{
 }
 
 .contact .text{
+    color: #fff;
     width: 80%;
     text-align: center;
     margin: auto;
@@ -666,18 +721,19 @@ footer .text span a:hover{
 }
 @keyframes words{
     0%, 20%{
-        content: "Web Developer";
+        content: " Web Developer";
     }
     21%, 40%{
-        content: "Developer";
+        content: " Developer";
     }
     41%, 60%{
-        content: "Web Designer";
+        content: " Web Designer";
     }
     61%, 80%{
-        content: "Businessman";
+        content: " Businessman";
     }
     81%, 100%{
-        content: "Student";
+        content: " Student";
     }
 }
+
