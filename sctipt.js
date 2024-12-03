@@ -11,8 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Показ/скрытие меню
     menuToggle.addEventListener('click', () => {
-        const isMenuVisible = menuItems.style.display === 'flex';
-        menuItems.style.display = isMenuVisible ? 'none' : 'flex';
+        menuItems.classList.toggle('active'); // Переключаем класс "active"
     });
 
     // Открыть выпадающее меню
@@ -56,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Функция для плавного скроллинга к секции
     function scrollToSection(sectionId) {
         document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-        menuItems.style.display = 'none'; // Закрыть меню после перехода
+        menuItems.classList.remove('active'); // Закрыть меню после перехода
     }
 
     // Пример использования функции для кнопок в меню
@@ -67,4 +66,23 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollToSection(sectionId);
         });
     });
+
+    // Добавляем медиазапросы для мобильной версии
+    const mediaQuery = window.matchMedia('(max-width: 768px)'); // Размера экрана для мобильных устройств
+
+    // Функция для обновления стилей меню в зависимости от разрешения экрана
+    function updateMenuLayout() {
+        if (mediaQuery.matches) {
+            // Для мобильных устройств скрываем меню по умолчанию
+            menuItems.classList.remove('active');
+            menuItems.style.transition = 'none'; // Отключаем анимации, чтобы они не мешали
+        } else {
+            // Для больших экранов можно добавить анимацию при показе меню
+            menuItems.style.transition = 'all 0.3s ease';
+        }
+    }
+
+    // Обработчик события на изменение размера экрана
+    mediaQuery.addEventListener('change', updateMenuLayout);
+    updateMenuLayout(); // Инициализируем layout при загрузке
 });
