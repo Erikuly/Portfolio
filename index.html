@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="5773759.ico" type="image/png">
     <title>Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -17,25 +18,28 @@
                 <span>Dias</span>
             </div>
             <div class="links">
-                <div class="link" data-aos="zoom-in" data-aos-duration="1500"><a onclick="scrollToSection('home')" href="#">Home</a></div>
-                <div class="link" data-aos="zoom-in" data-aos-duration="1500"><a onclick="scrollToSection('about')" href="#">About</a></div>
-                <div class="link" data-aos="zoom-in" data-aos-duration="1500"><a onclick="scrollToSection('skills')" href="#">Skills</a></div>
-                <div class="link" data-aos="zoom-in" data-aos-duration="1500"><a onclick="scrollToSection('services')" href="#">Services</a></div>
-                <div class="link" data-aos="zoom-in" data-aos-duration="1500"><a onclick="scrollToSection('contact')" href="#">Contact</a></div>
+                <div class="link" data-aos="zoom-in" data-aos-duration="1500"><a onclick="scrollToSection('home')" href="#home">Home</a></div>
+                <div class="link" data-aos="zoom-in" data-aos-duration="1500"><a onclick="scrollToSection('about')" href="#about">About</a></div>
+                <div class="link" data-aos="zoom-in" data-aos-duration="1500"><a onclick="scrollToSection('skills')" href="#skills">Skills</a></div>
+                <div class="link" data-aos="zoom-in" data-aos-duration="1500"><a onclick="scrollToSection('services')" href="#services">Services</a></div>
+                <div class="link" data-aos="zoom-in" data-aos-duration="1500"><a onclick="scrollToSection('contact')" href="#contact">Contact</a></div>
             </div>
-            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+            
+            <i class="fa-solid fa-bars hamburg"></i>
         </div>
         <div class="dropdown">
-            <div class="links">
-                <a  href="#">Home</a>
-                <a  href="#">About</a>
-                <a  href="#">Skills</a>
-                <a  href="#">Services</a>
-                <a  href="#">Contact</a>
-                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            <div id="menuItems" class="links">
+        
+                <div class="link"><a onclick="scrollToSection('home')" href="#home">Home</a></div>
+                <div class="link"><a onclick="scrollToSection('about')" href="#about">About</a></div>
+                <div class="link"><a onclick="scrollToSection('skills')" href="#skills">Skills</a></div>
+                <div class="link"><a onclick="scrollToSection('services')" href="#services">Services</a></div>
+                <div class="link"><a onclick="scrollToSection('contact')" href="#contact">Contact</a></div>
+                <i id="menuToggle" class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
             </div>
         </div>
     </nav>
+    
 
     <button id="scrollTopBtn" class="scroll-top-btn hidden" onclick="scrollToTop()">↑</button>
 
@@ -43,7 +47,7 @@
     <section>
         <div class="main-container" id="home">
             <div class="image"  data-aos="zoom-in" data-aos-duration="3000">
-                <img src="https://github.com/Erikuly/Portfolio/blob/main/main.jpg?raw=true" alt="">
+                <img src="C:\Users\eriku\OneDrive\Рабочий стол\portfolio\main.jpg" alt="">
             </div>
             <div class="content">
                 <h1 data-aos="fade-left"  data-aos-duration="1500" data-aos-delay="700">
@@ -54,13 +58,13 @@
                 
                 <p  data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">Glad to welcome you to my site</p>
                 <div class="social-links">
-                    <a href="https://wa.me/77474653597"  data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/in/%D0%B4%D0%B8%D0%B0%D1%81-%D0%B5%D1%81%D0%BA%D0%B5%D0%BD%D0%B4%D1%96%D1%80-39484933a/"  data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://t.me/Erikuly_dias"  data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-telegram"></i></a>
                     <a href="https://www.instagram.com/erikuly_dias/"  data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.tiktok.com/@dias_yeskendir"  data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-tiktok"></i></a>
                 </div>
                 <div class="btn">
-                    <button><a href="https://www.linkedin.com/in/%D0%B4%D0%B8%D0%B0%D1%81-%D0%B5%D1%81%D0%BA%D0%B5%D0%BD%D0%B4%D1%96%D1%80-39484933a/">Hire me</a></button>
+                    <button><a href="https://wa.me/77474653597">Hire me</a></button>
                 </div>
             </div>
         </div>
@@ -71,15 +75,15 @@
             <div class="title" data-aos="fade-up" data-aos-duration="1500"><span>About Me</span></div>
             <div class="about-details">
                 <div class="left"  data-aos="fade-right" data-aos-duration="1500" data-aos-delay="200">
-                    <img src="https://github.com/Erikuly/Portfolio/blob/main/main.jpg?raw=true" alt="" />
+                    <img src="C:\Users\eriku\OneDrive\Рабочий стол\portfolio\main.jpg" alt="" />
                 </div>
                 <div class="right">
-                    <div class="topic"  data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">IT is My Passion</div>
+                    <div class="topic"  data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">Programming is My Passion</div>
                     <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300">
                         You can check out my resume  
                     </p>
-                    <div class="button"  data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400">
-                        <button><a href="Резюме Dias Yeskendir.pdf">Download</a></button>
+                    <div class="btn"  data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400">
+                        <button><a href="C:\Users\eriku\OneDrive\Рабочий стол\portfolio\Резюме Dias Yeskendir.pdf">Open</a></button>
                     </div>
                 </div>
             </div>
@@ -169,8 +173,8 @@
             </div>
             <div class="text">
                 <div class="topic" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="200">Have Any Project?</div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempora minima ipsa saepe similique aliquid ad, harum inventore. Repellat doloremque molestiae ullam debitis dicta nemo quae dolorem, nisi laborum eveniet.</p>
-                <div class="button">
+                <p>If you have a project and need a quality website, contact me! I will help you to create a site that fully meets your requirements. Write to my email and we will discuss all the details!</p>
+                <div class="btn">
                     <button><a href="mailto:erikuly.disa@gmail.com">Let's Chat</a></button>
                 </div>
             </div>
@@ -186,11 +190,9 @@
                 &#169;2024 All Rights Reserved</span>
         </div>
     </footer>
-
-    <script src="unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.innit({offset:0});
-    </script>
     <script src="sctipt.js"></script>
+
+   
+    
 </body>
 </html>
