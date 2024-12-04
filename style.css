@@ -130,7 +130,7 @@ nav{
 
 .dropdown .links a {
     color: #551A8B;
-    padding: 1rem 0;
+    padding: 0rem 0;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
